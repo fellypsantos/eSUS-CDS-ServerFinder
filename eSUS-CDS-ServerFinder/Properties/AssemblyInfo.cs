@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associadas a um assembly.
-[assembly: AssemblyTitle("eSUS-CDS-ServerFinder")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("eSUS-APS-ServerFinder")]
+[assembly: AssemblyDescription("Aplicação para procurar um computador em rede, através do MAC, obter o IP e abrir o e-SUS no navegador padrão.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("eSUS-CDS-ServerFinder")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2021")]
+[assembly: AssemblyCompany("Fellyp Santos")]
+[assembly: AssemblyProduct("eSUS-APS-ServerFinder")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // É possível especificar todos os valores ou usar como padrão os Números de Build e da Revisão
 // usando o "*" como mostrado abaixo:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.1.0.0")]
+[assembly: AssemblyFileVersion("1.1.0.0")]

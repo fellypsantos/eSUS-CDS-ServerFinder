@@ -29,12 +29,18 @@ namespace eSUS_CDS_ServerFinder
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.TextBox_MacAddress = new System.Windows.Forms.TextBox();
             this.Button_SaveSetting = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Button_OpenCDS = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.TextBox_Logger = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TextBox_TargetURL = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // TextBox_MacAddress
@@ -61,19 +67,20 @@ namespace eSUS_CDS_ServerFinder
             // 
             this.groupBox1.Controls.Add(this.TextBox_MacAddress);
             this.groupBox1.Controls.Add(this.Button_SaveSetting);
-            this.groupBox1.Location = new System.Drawing.Point(15, 109);
+            this.groupBox1.Location = new System.Drawing.Point(18, 122);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(224, 124);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configuração de Rede";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Button_OpenCDS
             // 
             this.Button_OpenCDS.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_OpenCDS.Location = new System.Drawing.Point(15, 18);
+            this.Button_OpenCDS.Location = new System.Drawing.Point(18, 25);
             this.Button_OpenCDS.Name = "Button_OpenCDS";
-            this.Button_OpenCDS.Size = new System.Drawing.Size(224, 77);
+            this.Button_OpenCDS.Size = new System.Drawing.Size(224, 82);
             this.Button_OpenCDS.TabIndex = 0;
             this.Button_OpenCDS.Text = "Abrir e-SUS-CDS!";
             this.Button_OpenCDS.UseVisualStyleBackColor = true;
@@ -83,30 +90,78 @@ namespace eSUS_CDS_ServerFinder
             // 
             this.label1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(15, 238);
+            this.label1.Location = new System.Drawing.Point(15, 258);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(224, 27);
             this.label1.TabIndex = 5;
-            this.label1.Text = "finder.v1.0 - github.com/fellypsantos";
+            this.label1.Text = "finder.v1.1 - github.com/fellypsantos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TextBox_Logger
+            // 
+            this.TextBox_Logger.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox_Logger.Location = new System.Drawing.Point(254, 128);
+            this.TextBox_Logger.Multiline = true;
+            this.TextBox_Logger.Name = "TextBox_Logger";
+            this.TextBox_Logger.Size = new System.Drawing.Size(279, 118);
+            this.TextBox_Logger.TabIndex = 6;
+            this.TextBox_Logger.Text = "Logs serão adicionados aqui...";
+            this.TextBox_Logger.TextChanged += new System.EventHandler(this.TextBox_Logger_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label2.Location = new System.Drawing.Point(251, 258);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(282, 27);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "fellypsantos2011@gmail.com";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.TextBox_TargetURL);
+            this.groupBox2.Location = new System.Drawing.Point(254, 25);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(279, 82);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Link Gerado";
+            // 
+            // TextBox_TargetURL
+            // 
+            this.TextBox_TargetURL.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox_TargetURL.Location = new System.Drawing.Point(16, 33);
+            this.TextBox_TargetURL.Name = "TextBox_TargetURL";
+            this.TextBox_TargetURL.Size = new System.Drawing.Size(248, 27);
+            this.TextBox_TargetURL.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(253, 272);
+            this.ClientSize = new System.Drawing.Size(543, 293);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.TextBox_Logger);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Button_OpenCDS);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "e-SUS-CDS-ServerFinder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "eSUS APS Finder";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -117,6 +172,10 @@ namespace eSUS_CDS_ServerFinder
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button Button_OpenCDS;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TextBox_Logger;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox TextBox_TargetURL;
     }
 }
 

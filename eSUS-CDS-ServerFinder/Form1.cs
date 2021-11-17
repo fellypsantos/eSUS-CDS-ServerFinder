@@ -12,6 +12,8 @@ namespace eSUS_CDS_ServerFinder
             InitializeComponent();
         }
 
+        private void addLogMessage(string message = "") => TextBox_Logger.AppendText(message + Environment.NewLine);
+
         private void Button_OpenCDS_Click(object sender, EventArgs e)
         {
             Process pProcess = new Process();
@@ -22,6 +24,8 @@ namespace eSUS_CDS_ServerFinder
             pProcess.StartInfo.CreateNoWindow = true;
             pProcess.Start();
 
+            bool found = false;
+            string targetURL = null;
             string cmdOutput = pProcess.StandardOutput.ReadToEnd();
             string pattern = @"(?<ip>([0-9]{1,3}\.?){4})\s*(?<mac>([a-f0-9]{2}-?){6})";
 
@@ -30,13 +34,25 @@ namespace eSUS_CDS_ServerFinder
                 string MAC = m.Groups["mac"].Value.ToUpper();
                 string IP = m.Groups["ip"].Value;
 
-                Debug.WriteLine("Current Mac: " + MAC);
+                addLogMessage("Analisando MAC: " + MAC);
 
                 if (MAC == Properties.Settings.Default.MacAddress.ToUpper())
                 {
-                    Process.Start($"http://{IP}:8090/esus/");
+                    addLogMessage("MÁQUINA ENCONTRADA!");
+
+                    found = true;
+                    targetURL = $"http://{IP}:8090/esus/";
+                    TextBox_TargetURL.Text = targetURL;
+                    Process.Start(targetURL);
                     break;
                 }
+            }
+
+            // MAC NOT FOUND ON LAN
+            if (!found)
+            {
+                addLogMessage("Nenhum MAC correspondente.");
+                MessageBox.Show("Máquina não encontrada na rede, verifique o MAC e se o computador destino está ligado e conectado na mesma rede.", "Finder", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -59,6 +75,21 @@ namespace eSUS_CDS_ServerFinder
         private void Form1_Load(object sender, EventArgs e)
         {
             TextBox_MacAddress.Text = Properties.Settings.Default.MacAddress;
+        }
+
+        private void StartLoop_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_Logger_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
