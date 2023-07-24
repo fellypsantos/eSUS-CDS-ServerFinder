@@ -24,6 +24,9 @@ namespace eSUS_CDS_ServerFinder
             pProcess.StartInfo.CreateNoWindow = true;
             pProcess.Start();
 
+            LinkLabel_TargetURL.Enabled = false;
+            TextBox_Logger.Clear();
+
             bool found = false;
             string targetURL = null;
             string cmdOutput = pProcess.StandardOutput.ReadToEnd();
@@ -42,7 +45,8 @@ namespace eSUS_CDS_ServerFinder
 
                     found = true;
                     targetURL = $"http://{IP}:8090/esus/";
-                    TextBox_TargetURL.Text = targetURL;
+                    LinkLabel_TargetURL.Text = targetURL;
+                    LinkLabel_TargetURL.Enabled = true;
                     Process.Start(targetURL);
                     break;
                 }
@@ -77,19 +81,10 @@ namespace eSUS_CDS_ServerFinder
             TextBox_MacAddress.Text = Properties.Settings.Default.MacAddress;
         }
 
-        private void StartLoop_Click(object sender, EventArgs e)
+        private void LinkLabel_TargetURL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBox_Logger_TextChanged(object sender, EventArgs e)
-        {
-
+            LinkLabel link = sender as LinkLabel;
+            Process.Start(link.Text);
         }
     }
 }

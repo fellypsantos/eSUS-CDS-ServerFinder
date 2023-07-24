@@ -38,7 +38,7 @@ namespace eSUS_CDS_ServerFinder
             this.TextBox_Logger = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.TextBox_TargetURL = new System.Windows.Forms.TextBox();
+            this.LinkLabel_TargetURL = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -46,18 +46,20 @@ namespace eSUS_CDS_ServerFinder
             // TextBox_MacAddress
             // 
             this.TextBox_MacAddress.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_MacAddress.Location = new System.Drawing.Point(16, 33);
+            this.TextBox_MacAddress.Location = new System.Drawing.Point(21, 41);
+            this.TextBox_MacAddress.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_MacAddress.Name = "TextBox_MacAddress";
-            this.TextBox_MacAddress.Size = new System.Drawing.Size(193, 31);
+            this.TextBox_MacAddress.Size = new System.Drawing.Size(256, 36);
             this.TextBox_MacAddress.TabIndex = 1;
             this.TextBox_MacAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Button_SaveSetting
             // 
             this.Button_SaveSetting.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_SaveSetting.Location = new System.Drawing.Point(16, 72);
+            this.Button_SaveSetting.Location = new System.Drawing.Point(21, 89);
+            this.Button_SaveSetting.Margin = new System.Windows.Forms.Padding(4);
             this.Button_SaveSetting.Name = "Button_SaveSetting";
-            this.Button_SaveSetting.Size = new System.Drawing.Size(193, 31);
+            this.Button_SaveSetting.Size = new System.Drawing.Size(257, 38);
             this.Button_SaveSetting.TabIndex = 2;
             this.Button_SaveSetting.Text = "Salvar Endereço MAC";
             this.Button_SaveSetting.UseVisualStyleBackColor = true;
@@ -67,20 +69,22 @@ namespace eSUS_CDS_ServerFinder
             // 
             this.groupBox1.Controls.Add(this.TextBox_MacAddress);
             this.groupBox1.Controls.Add(this.Button_SaveSetting);
-            this.groupBox1.Location = new System.Drawing.Point(18, 122);
+            this.groupBox1.Location = new System.Drawing.Point(24, 150);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(224, 124);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(299, 153);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configuração de Rede";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Button_OpenCDS
             // 
             this.Button_OpenCDS.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_OpenCDS.Location = new System.Drawing.Point(18, 25);
+            this.Button_OpenCDS.Location = new System.Drawing.Point(24, 31);
+            this.Button_OpenCDS.Margin = new System.Windows.Forms.Padding(4);
             this.Button_OpenCDS.Name = "Button_OpenCDS";
-            this.Button_OpenCDS.Size = new System.Drawing.Size(224, 82);
+            this.Button_OpenCDS.Size = new System.Drawing.Size(299, 101);
             this.Button_OpenCDS.TabIndex = 0;
             this.Button_OpenCDS.Text = "Abrir e-SUS-CDS!";
             this.Button_OpenCDS.UseVisualStyleBackColor = true;
@@ -90,58 +94,66 @@ namespace eSUS_CDS_ServerFinder
             // 
             this.label1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(15, 258);
+            this.label1.Location = new System.Drawing.Point(20, 318);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 27);
+            this.label1.Size = new System.Drawing.Size(299, 33);
             this.label1.TabIndex = 5;
-            this.label1.Text = "finder.v1.1 - github.com/fellypsantos";
+            this.label1.Text = "finder.v1.2 - github.com/fellypsantos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TextBox_Logger
             // 
             this.TextBox_Logger.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_Logger.Location = new System.Drawing.Point(254, 128);
+            this.TextBox_Logger.Location = new System.Drawing.Point(339, 158);
+            this.TextBox_Logger.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_Logger.Multiline = true;
             this.TextBox_Logger.Name = "TextBox_Logger";
-            this.TextBox_Logger.Size = new System.Drawing.Size(279, 118);
+            this.TextBox_Logger.Size = new System.Drawing.Size(371, 144);
             this.TextBox_Logger.TabIndex = 6;
             this.TextBox_Logger.Text = "Logs serão adicionados aqui...";
-            this.TextBox_Logger.TextChanged += new System.EventHandler(this.TextBox_Logger_TextChanged);
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(251, 258);
+            this.label2.Location = new System.Drawing.Point(335, 318);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(282, 27);
+            this.label2.Size = new System.Drawing.Size(376, 33);
             this.label2.TabIndex = 7;
             this.label2.Text = "fellypsantos2011@gmail.com";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.TextBox_TargetURL);
-            this.groupBox2.Location = new System.Drawing.Point(254, 25);
+            this.groupBox2.Controls.Add(this.LinkLabel_TargetURL);
+            this.groupBox2.Location = new System.Drawing.Point(339, 31);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(279, 82);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(372, 101);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Link Gerado";
             // 
-            // TextBox_TargetURL
+            // LinkLabel_TargetURL
             // 
-            this.TextBox_TargetURL.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_TargetURL.Location = new System.Drawing.Point(16, 33);
-            this.TextBox_TargetURL.Name = "TextBox_TargetURL";
-            this.TextBox_TargetURL.Size = new System.Drawing.Size(248, 27);
-            this.TextBox_TargetURL.TabIndex = 1;
+            this.LinkLabel_TargetURL.Enabled = false;
+            this.LinkLabel_TargetURL.Location = new System.Drawing.Point(7, 22);
+            this.LinkLabel_TargetURL.Name = "LinkLabel_TargetURL";
+            this.LinkLabel_TargetURL.Size = new System.Drawing.Size(358, 66);
+            this.LinkLabel_TargetURL.TabIndex = 2;
+            this.LinkLabel_TargetURL.TabStop = true;
+            this.LinkLabel_TargetURL.Text = "aguardando endereço...";
+            this.LinkLabel_TargetURL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LinkLabel_TargetURL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_TargetURL_LinkClicked);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 293);
+            this.ClientSize = new System.Drawing.Size(724, 361);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TextBox_Logger);
@@ -150,6 +162,7 @@ namespace eSUS_CDS_ServerFinder
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -159,7 +172,6 @@ namespace eSUS_CDS_ServerFinder
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,7 +187,7 @@ namespace eSUS_CDS_ServerFinder
         private System.Windows.Forms.TextBox TextBox_Logger;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox TextBox_TargetURL;
+        private System.Windows.Forms.LinkLabel LinkLabel_TargetURL;
     }
 }
 
