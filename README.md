@@ -6,16 +6,15 @@
 ![GitHub language count](https://img.shields.io/github/languages/top/fellypsantos/eSUS-CDS-ServerFinder)
 ![GitHub issues count](https://img.shields.io/github/issues-raw/fellypsantos/eSUS-CDS-ServerFinder)
 
-![Captura de Tela](screenshot-1.png)
+![Captura de Tela](https://github.com/fellypsantos/eSUS-CDS-ServerFinder/assets/11094932/d76990bb-b257-424c-bc79-795634e3628e)
 
 > Aplicação auxiliar para quem usa e-SUS-APS em rede local, o antigo CDS, encontra o IP do servidor atraves do endereço MAC.
 
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
-<!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
 * Você precisa da plataforma .NETFramework 4.6.1 instalada ou superior.
-* Sistema operacional Windows 7 SP1 ou Windows 10
+* Sistema operacional Windows 7 SP1, Windows 10, Windows 11.
 
 ## 🚀 Instalando
 
